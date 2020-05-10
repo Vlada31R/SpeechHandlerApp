@@ -12,6 +12,12 @@
 		79B12E642467DD6600BA3B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E622467DD6600BA3B7B /* Main.storyboard */; };
 		79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E652467DD6700BA3B7B /* Assets.xcassets */; };
 		79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */; };
+		79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E7B2467F15A00BA3B7B /* AppAssembly.swift */; };
+		79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E7D2467F19600BA3B7B /* Coordinator.swift */; };
+		79B12E802467F1E200BA3B7B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E7F2467F1E200BA3B7B /* ApplicationCoordinator.swift */; };
+		79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E812467F35600BA3B7B /* ScenesAssembly.swift */; };
+		79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E832467F38700BA3B7B /* ServicesAssembly.swift */; };
+		79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		79B12E652467DD6700BA3B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79B12E682467DD6700BA3B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79B12E6A2467DD6700BA3B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79B12E7B2467F15A00BA3B7B /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		79B12E7D2467F19600BA3B7B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		79B12E7F2467F1E200BA3B7B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		79B12E812467F35600BA3B7B /* ScenesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesAssembly.swift; sourceTree = "<group>"; };
+		79B12E832467F38700BA3B7B /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsAssembly.swift; sourceTree = "<group>"; };
 		7B2D7AD6251AAF796CBB2A53 /* Pods-SpeechHandlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.release.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +80,10 @@
 		79B12E702467E4DE00BA3B7B /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E7B2467F15A00BA3B7B /* AppAssembly.swift */,
+				79B12E812467F35600BA3B7B /* ScenesAssembly.swift */,
+				79B12E832467F38700BA3B7B /* ServicesAssembly.swift */,
+				79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -85,6 +101,10 @@
 			children = (
 				79B12E622467DD6600BA3B7B /* Main.storyboard */,
 				79B12E702467E4DE00BA3B7B /* Assemblies */,
+				79B12E772467EFEA00BA3B7B /* Routers */,
+				79B12E792467F06400BA3B7B /* Coordinators */,
+				79B12E782467F01800BA3B7B /* Managers */,
+				79B12E7A2467F09200BA3B7B /* Flows */,
 				79B12E712467E4F800BA3B7B /* AppDelegate */,
 			);
 			path = Source;
@@ -122,6 +142,36 @@
 				79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		79B12E772467EFEA00BA3B7B /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		79B12E782467F01800BA3B7B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		79B12E792467F06400BA3B7B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E7D2467F19600BA3B7B /* Coordinator.swift */,
+				79B12E7F2467F1E200BA3B7B /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		79B12E7A2467F09200BA3B7B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		A91F061BE307BB517BF08EE7 /* Pods */ = {
@@ -239,6 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
+				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
+				79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */,
+				79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */,
+				79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */,
+				79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */,
+				79B12E802467F1E200BA3B7B /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
