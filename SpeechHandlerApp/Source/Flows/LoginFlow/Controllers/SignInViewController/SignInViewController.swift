@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import Firebase
 
 protocol SignInViewControllerDelegate: class {
 
-    func signInViewControllerDidTapSignIn(_ viewController: SignInViewController)
+    func signInViewControllerDidSignIn(_ viewController: SignInViewController, with user: User)
 }
 
-class SignInViewController: UIViewController, StoryboardIdentifiable {
+class SignInViewController: BaseViewController, StoryboardIdentifiable {
 
     weak var delegate: SignInViewControllerDelegate?
 
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+
     @IBAction func didTapSignInButton(_ sender: UIButton) {
 
-        delegate?.signInViewControllerDidTapSignIn(self)
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text
+        else { return }
+
+        Auth.auth().signIn(withEmail: email,
+                           password: password,
+                           completion: { [weak self] authResult, error in
+
+                               guard let strongSelf = self else { return }
+
+                               guard error == nil,
+                                     let user = authResult?.user
+                               else {
+                                   return
+                               }
+
+                               strongSelf.delegate?.signInViewControllerDidSignIn(strongSelf, with: user)
+        })
     }
 }

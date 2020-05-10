@@ -25,6 +25,7 @@
 		79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E9E2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift */; };
 		79B12EA22468165600BA3B7B /* UIStoryboard+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */; };
 		79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA32468194300BA3B7B /* LoginCoordinator.swift */; };
+		79B12EA924682FEF00BA3B7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA824682FEF00BA3B7B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		79B12E9E2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesLoginFlowAssembly.swift; sourceTree = "<group>"; };
 		79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewController.swift"; sourceTree = "<group>"; };
 		79B12EA32468194300BA3B7B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		79B12EA824682FEF00BA3B7B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7B2D7AD6251AAF796CBB2A53 /* Pods-SpeechHandlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.release.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		79B12E722467E5E500BA3B7B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				79B12EA624682FC600BA3B7B /* Common */,
 				79B12E702467E4DE00BA3B7B /* Assemblies */,
 				79B12E792467F06400BA3B7B /* Coordinators */,
 				79B12E782467F01800BA3B7B /* Managers */,
@@ -299,6 +302,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		79B12EA624682FC600BA3B7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				79B12EA724682FD400BA3B7B /* BaseViewController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		79B12EA724682FD400BA3B7B /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B12EA824682FEF00BA3B7B /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
 		A91F061BE307BB517BF08EE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +438,7 @@
 				79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */,
 				79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */,
 				79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */,
+				79B12EA924682FEF00BA3B7B /* BaseViewController.swift in Sources */,
 				79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */,
 				79B12E992468148100BA3B7B /* LoginViewController.swift in Sources */,
 				79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */,

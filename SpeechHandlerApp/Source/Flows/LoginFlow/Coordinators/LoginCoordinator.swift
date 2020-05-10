@@ -6,13 +6,20 @@
 //  Copyright © 2020 Vlada Radchenko. All rights reserved.
 //
 
+import UIKit
+import Firebase
+
 class LoginCoordinator {
 
+    fileprivate let window: UIWindow
+
     private let scenesAssembly: ScenesAssembly
-    private var controller: LoginViewController?
+    private var loginController: LoginViewController?
 
-    init(scenesAssembly: ScenesAssembly) {
+    init(window: UIWindow,
+         scenesAssembly: ScenesAssembly) {
 
+        self.window = window
         self.scenesAssembly = scenesAssembly
     }
 }
@@ -22,7 +29,11 @@ extension LoginCoordinator: Coordinator {
 
     func start() {
 
-        controller = scenesAssembly.scenesLoginFlowAssembly.instantiateLoginVC(delegate: self)
+        loginController = scenesAssembly.scenesLoginFlowAssembly.instantiateLoginVC(delegate: self)
+
+        guard let loginVC = loginController else { return }
+
+        window.rootViewController = UINavigationController(rootViewController: loginVC)
     }
 }
 
@@ -32,18 +43,20 @@ extension LoginCoordinator: LoginViewControllerDelegate {
     func loginViewControllerDidTapSignUp(_ viewController: LoginViewController) {
 
         let signUpVC = scenesAssembly.scenesLoginFlowAssembly.instantiateSignUpVC(delegate: self)
+        loginController?.navigationController?.pushViewController(signUpVC, animated: true)
     }
 
     func loginViewControllerDidTapSignIn(_ viewController: LoginViewController) {
 
         let signInVC = scenesAssembly.scenesLoginFlowAssembly.instantiateSignInVC(delegate: self)
+        loginController?.navigationController?.pushViewController(signInVC, animated: true)
     }
 }
 
 // MARK: - SignUpViewControllerDelegate
 extension LoginCoordinator: SignUpViewControllerDelegate {
 
-    func signUpViewControllerDidTapSignUp(_ viewController: SignUpViewController) {
+    func signUpViewControllerDidSignUp(_ viewController: SignUpViewController, with user: User) {
 
     }
 }
@@ -51,7 +64,7 @@ extension LoginCoordinator: SignUpViewControllerDelegate {
 // MARK: - SignInViewControllerDelegate
 extension LoginCoordinator: SignInViewControllerDelegate {
 
-    func signInViewControllerDidTapSignIn(_ viewController: SignInViewController) {
+    func signInViewControllerDidSignIn(_ viewController: SignInViewController, with user: User) {
 
     }
 }

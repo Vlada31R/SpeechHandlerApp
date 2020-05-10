@@ -82,7 +82,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="R2u-1L-3Sa">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="iEA-sB-nrh" customClass="SignUpViewController" customModule="SpeechHandlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="iEA-sB-nrh" customClass="SignUpViewController" customModule="SpeechHandlerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kx1-YA-wHQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                     <constraint firstAttribute="width" constant="220" id="not-Mi-K2w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lak-Gz-mp4">
                                 <rect key="frame" x="97" y="628" width="220" height="45"/>
@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="width" constant="220" id="XTs-1F-uA0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfG-qA-oaa">
                                 <rect key="frame" x="82" y="693" width="250" height="75"/>
@@ -157,6 +157,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zED-VX-w5c"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Nn8-Zn-mV1" id="ehk-h0-Zer"/>
+                        <outlet property="passwordTextField" destination="KHw-we-Y1k" id="43x-87-k7q"/>
+                        <outlet property="repeatPasswordTextField" destination="lak-Gz-mp4" id="NXt-xd-vtY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fj-NY-P9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +170,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="8Cn-mm-clu">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="Ub6-Lm-fwL" customClass="SignInViewController" customModule="SpeechHandlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" modalPresentationStyle="fullScreen" id="Ub6-Lm-fwL" customClass="SignInViewController" customModule="SpeechHandlerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dfz-EP-qDZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,7 +182,7 @@
                                     <constraint firstAttribute="width" constant="256" id="yGX-Y1-Dby"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-nT-qqf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-nT-qqf">
                                 <rect key="frame" x="97" y="498" width="220" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="7L4-TB-aVk"/>
@@ -193,7 +198,7 @@
                                     <constraint firstAttribute="width" constant="220" id="ju9-un-l57"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N7-ee-fHB">
                                 <rect key="frame" x="82" y="628" width="250" height="75"/>
@@ -229,6 +234,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AFe-3h-z1S"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Y6h-nT-qqf" id="rAW-cy-kvs"/>
+                        <outlet property="passwordTextField" destination="YiR-yf-PMf" id="rfb-IR-Njb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyI-ao-cTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

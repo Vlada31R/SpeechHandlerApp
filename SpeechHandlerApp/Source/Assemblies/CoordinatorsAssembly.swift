@@ -11,6 +11,7 @@ import UIKit
 protocol CoordinatorsAssemblyProtocol {
 
     func makeAppCoordinator(window: UIWindow) -> Coordinator
+    func makeLoginCoordinator(window: UIWindow) -> Coordinator
 }
 
 class CoordinatorsAssembly {
@@ -33,5 +34,11 @@ extension CoordinatorsAssembly: CoordinatorsAssemblyProtocol {
         return ApplicationCoordinator(window: window,
                                       scenesAssembly: scenesAssembly,
                                       coordAssembly: self)
+    }
+
+    func makeLoginCoordinator(window: UIWindow) -> Coordinator {
+
+        return LoginCoordinator(window: window,
+                                scenesAssembly: scenesAssembly)
     }
 }

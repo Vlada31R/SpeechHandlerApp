@@ -10,12 +10,12 @@ import UIKit
 
 class ApplicationCoordinator {
 
-    let window: UIWindow
+    fileprivate let window: UIWindow
 
     private var scenesAssembly: ScenesAssembly
     private var coordAssembly: CoordinatorsAssemblyProtocol
 
-    private var childCoordinators: [Coordinator] = []
+    private var loginCoordinator: Coordinator?
 
     init(window: UIWindow,
          scenesAssembly: ScenesAssembly,
@@ -30,6 +30,12 @@ class ApplicationCoordinator {
 // MARK: - Coordinator
 extension ApplicationCoordinator: Coordinator {
 
-    func start() {}
+    func start() {
+
+        window.makeKeyAndVisible()
+
+        loginCoordinator = coordAssembly.makeLoginCoordinator(window: window)
+        loginCoordinator?.start()
+    }
 }
 

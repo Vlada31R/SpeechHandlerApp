@@ -3,6 +3,8 @@
 
 target 'SpeechHandlerApp' do
 
+  pod 'IQKeyboardManagerSwift', '~> 6.5.0'
+
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
 
