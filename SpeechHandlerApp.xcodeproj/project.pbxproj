@@ -18,6 +18,7 @@
 		79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E812467F35600BA3B7B /* ScenesAssembly.swift */; };
 		79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E832467F38700BA3B7B /* ServicesAssembly.swift */; };
 		79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */; };
+		79B12E922467FDF700BA3B7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E912467FDF700BA3B7B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		79B12E812467F35600BA3B7B /* ScenesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesAssembly.swift; sourceTree = "<group>"; };
 		79B12E832467F38700BA3B7B /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsAssembly.swift; sourceTree = "<group>"; };
+		79B12E912467FDF700BA3B7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B2D7AD6251AAF796CBB2A53 /* Pods-SpeechHandlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.release.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		79B12E742467E60800BA3B7B /* Plists */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E912467FDF700BA3B7B /* GoogleService-Info.plist */,
 				79B12E6A2467DD6700BA3B7B /* Info.plist */,
 			);
 			path = Plists;
@@ -170,8 +173,88 @@
 		79B12E7A2467F09200BA3B7B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E882467FA5200BA3B7B /* LoginFlow */,
+				79B12E872467FA4000BA3B7B /* MainFlow */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		79B12E872467FA4000BA3B7B /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E902467FB5600BA3B7B /* Assemblies */,
+				79B12E8E2467FB3800BA3B7B /* Coordinators */,
+				79B12E8B2467FAFF00BA3B7B /* Storyboard */,
+				79B12E8A2467FAD200BA3B7B /* Controllers */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		79B12E882467FA5200BA3B7B /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E8F2467FB5100BA3B7B /* Assemblies */,
+				79B12E8D2467FB3300BA3B7B /* Coordinators */,
+				79B12E8C2467FB0500BA3B7B /* Storyboard */,
+				79B12E892467FAC000BA3B7B /* Controllers */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		79B12E892467FAC000BA3B7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79B12E8A2467FAD200BA3B7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79B12E8B2467FAFF00BA3B7B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		79B12E8C2467FB0500BA3B7B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		79B12E8D2467FB3300BA3B7B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		79B12E8E2467FB3800BA3B7B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		79B12E8F2467FB5100BA3B7B /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		79B12E902467FB5600BA3B7B /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assemblies;
 			sourceTree = "<group>";
 		};
 		A91F061BE307BB517BF08EE7 /* Pods */ = {
@@ -253,6 +336,7 @@
 				79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */,
 				79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */,
 				79B12E642467DD6600BA3B7B /* Main.storyboard in Resources */,
+				79B12E922467FDF700BA3B7B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
