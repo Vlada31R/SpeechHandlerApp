@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6B1ED3D08EEC3625BE70A6A5 /* libPods-SpeechHandlerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */; };
 		79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */; };
-		79B12E642467DD6600BA3B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E622467DD6600BA3B7B /* Main.storyboard */; };
 		79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E652467DD6700BA3B7B /* Assets.xcassets */; };
 		79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */; };
 		79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E7B2467F15A00BA3B7B /* AppAssembly.swift */; };
@@ -19,6 +18,13 @@
 		79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E832467F38700BA3B7B /* ServicesAssembly.swift */; };
 		79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */; };
 		79B12E922467FDF700BA3B7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E912467FDF700BA3B7B /* GoogleService-Info.plist */; };
+		79B12E9424680D2500BA3B7B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E9324680D2500BA3B7B /* Login.storyboard */; };
+		79B12E992468148100BA3B7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E982468148100BA3B7B /* LoginViewController.swift */; };
+		79B12E9B2468149800BA3B7B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E9A2468149800BA3B7B /* SignUpViewController.swift */; };
+		79B12E9D246814B300BA3B7B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E9C246814B300BA3B7B /* SignInViewController.swift */; };
+		79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E9E2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift */; };
+		79B12EA22468165600BA3B7B /* UIStoryboard+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */; };
+		79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA32468194300BA3B7B /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +32,6 @@
 		66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeechHandlerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B12E592467DD6600BA3B7B /* SpeechHandlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechHandlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79B12E632467DD6600BA3B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79B12E652467DD6700BA3B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79B12E682467DD6700BA3B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79B12E6A2467DD6700BA3B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +42,13 @@
 		79B12E832467F38700BA3B7B /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		79B12E852467F3AF00BA3B7B /* CoordinatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsAssembly.swift; sourceTree = "<group>"; };
 		79B12E912467FDF700BA3B7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79B12E9324680D2500BA3B7B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		79B12E982468148100BA3B7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		79B12E9A2468149800BA3B7B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		79B12E9C246814B300BA3B7B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		79B12E9E2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesLoginFlowAssembly.swift; sourceTree = "<group>"; };
+		79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewController.swift"; sourceTree = "<group>"; };
+		79B12EA32468194300BA3B7B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7B2D7AD6251AAF796CBB2A53 /* Pods-SpeechHandlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.release.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,12 +113,11 @@
 		79B12E722467E5E500BA3B7B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				79B12E622467DD6600BA3B7B /* Main.storyboard */,
 				79B12E702467E4DE00BA3B7B /* Assemblies */,
-				79B12E772467EFEA00BA3B7B /* Routers */,
 				79B12E792467F06400BA3B7B /* Coordinators */,
 				79B12E782467F01800BA3B7B /* Managers */,
 				79B12E7A2467F09200BA3B7B /* Flows */,
+				79B12EA02468163600BA3B7B /* Extensions */,
 				79B12E712467E4F800BA3B7B /* AppDelegate */,
 			);
 			path = Source;
@@ -145,13 +156,6 @@
 				79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
-			sourceTree = "<group>";
-		};
-		79B12E772467EFEA00BA3B7B /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Routers;
 			sourceTree = "<group>";
 		};
 		79B12E782467F01800BA3B7B /* Managers */ = {
@@ -204,6 +208,9 @@
 		79B12E892467FAC000BA3B7B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E952468138F00BA3B7B /* LoginViewController */,
+				79B12E97246813B700BA3B7B /* SignUpViewController */,
+				79B12E96246813A400BA3B7B /* SignInViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +232,7 @@
 		79B12E8C2467FB0500BA3B7B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E9324680D2500BA3B7B /* Login.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 		79B12E8D2467FB3300BA3B7B /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				79B12EA32468194300BA3B7B /* LoginCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 		79B12E8F2467FB5100BA3B7B /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				79B12E9E2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -255,6 +265,38 @@
 			children = (
 			);
 			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		79B12E952468138F00BA3B7B /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E982468148100BA3B7B /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		79B12E96246813A400BA3B7B /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E9C246814B300BA3B7B /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		79B12E97246813B700BA3B7B /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B12E9A2468149800BA3B7B /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		79B12EA02468163600BA3B7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A91F061BE307BB517BF08EE7 /* Pods */ = {
@@ -335,7 +377,7 @@
 			files = (
 				79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */,
 				79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */,
-				79B12E642467DD6600BA3B7B /* Main.storyboard in Resources */,
+				79B12E9424680D2500BA3B7B /* Login.storyboard in Resources */,
 				79B12E922467FDF700BA3B7B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,25 +416,23 @@
 			files = (
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
+				79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */,
 				79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */,
+				79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */,
 				79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */,
+				79B12E992468148100BA3B7B /* LoginViewController.swift in Sources */,
 				79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */,
+				79B12E9B2468149800BA3B7B /* SignUpViewController.swift in Sources */,
 				79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */,
+				79B12E9D246814B300BA3B7B /* SignInViewController.swift in Sources */,
 				79B12E802467F1E200BA3B7B /* ApplicationCoordinator.swift in Sources */,
+				79B12EA22468165600BA3B7B /* UIStoryboard+ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		79B12E622467DD6600BA3B7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79B12E632467DD6600BA3B7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

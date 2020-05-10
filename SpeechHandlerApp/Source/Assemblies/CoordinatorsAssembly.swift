@@ -19,6 +19,7 @@ class CoordinatorsAssembly {
     private var servicesAssembly: ServicesAssembly
 
     init(scenesAssembly: ScenesAssembly, servicesAssembly: ServicesAssembly) {
+
         self.scenesAssembly = scenesAssembly
         self.servicesAssembly = servicesAssembly
     }

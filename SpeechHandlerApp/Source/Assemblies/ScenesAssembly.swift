@@ -13,4 +13,8 @@ class ScenesAssembly {
     init(servicesAssembly: ServicesAssembly) {
         self.servicesAssembly = servicesAssembly
     }
+
+    lazy var scenesLoginFlowAssembly: ScenesLoginFlowAssemblyProtocol = {
+        return ScenesLoginFlowAssembly(servicesAssembly: servicesAssembly)
+    }()
 }
