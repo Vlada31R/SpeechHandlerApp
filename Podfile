@@ -8,6 +8,8 @@ target 'SpeechHandlerApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
 
+  pod 'AsyncSwift', '~> 2.0.4'
+
   pod 'SwiftLint'
 
 end

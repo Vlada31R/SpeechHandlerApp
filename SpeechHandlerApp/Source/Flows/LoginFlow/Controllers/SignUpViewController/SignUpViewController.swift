@@ -25,10 +25,15 @@ class SignUpViewController: BaseViewController, StoryboardIdentifiable {
     @IBAction func didTapSignUpButton(_ sender: UIButton) {
 
         guard let email = emailTextField.text,
+              email.isEmail,
               let password = passwordTextField.text,
               let repeatPassword = repeatPasswordTextField.text,
+              password.count >= 6,
               password == repeatPassword
-        else { return }
+        else {
+            self.showAlert(message: "Entered data not valid.")
+            return
+        }
 
         Auth.auth().createUser(withEmail: email,
                                password: password,
@@ -39,6 +44,7 @@ class SignUpViewController: BaseViewController, StoryboardIdentifiable {
                                    guard error == nil,
                                          let user = authResult?.user
                                    else {
+                                       strongSelf.showAlert(message: "Something went wrong. Please try again later.")
                                        return
                                    }
 

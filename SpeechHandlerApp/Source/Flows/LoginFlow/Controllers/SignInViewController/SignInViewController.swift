@@ -36,6 +36,7 @@ class SignInViewController: BaseViewController, StoryboardIdentifiable {
                                guard error == nil,
                                      let user = authResult?.user
                                else {
+                                   strongSelf.showAlert(message: "Something went wrong. Please try again later.")
                                    return
                                }
 

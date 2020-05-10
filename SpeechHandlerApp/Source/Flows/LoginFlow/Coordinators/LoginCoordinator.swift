@@ -58,6 +58,7 @@ extension LoginCoordinator: SignUpViewControllerDelegate {
 
     func signUpViewControllerDidSignUp(_ viewController: SignUpViewController, with user: User) {
 
+        viewController.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -66,5 +67,6 @@ extension LoginCoordinator: SignInViewControllerDelegate {
 
     func signInViewControllerDidSignIn(_ viewController: SignInViewController, with user: User) {
 
+        viewController.navigationController?.popViewController(animated: true)
     }
 }

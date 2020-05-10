@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Async
 
 class BaseViewController: UIViewController {
 
@@ -51,6 +52,27 @@ fileprivate extension BaseViewController {
 
         if let index = keyboardManager.enabledTouchResignedClasses.index(where: { $0 == selfType }) {
             keyboardManager.enabledTouchResignedClasses.remove(at: index)
+        }
+    }
+}
+
+// MARK: - Alert showing
+extension BaseViewController {
+
+    func showAlert(message: String) {
+
+        let alert = UIAlertController(title: nil,
+                                      message: message,
+                                      preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Close",
+                                         style: .default,
+                                         handler: nil)
+
+        alert.addAction(cancelAction)
+
+        Async.main {
+            self.present(alert, animated: true)
         }
     }
 }
