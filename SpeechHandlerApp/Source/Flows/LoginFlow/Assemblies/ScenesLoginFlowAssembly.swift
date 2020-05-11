@@ -37,6 +37,7 @@ extension ScenesLoginFlowAssembly: ScenesLoginFlowAssemblyProtocol {
     func instantiateSignUpVC(delegate: SignUpViewControllerDelegate) -> SignUpViewController {
 
         let controller: SignUpViewController = UIStoryboard.loginFlowStoryboard.instantiateViewController()
+        controller.authService = servicesAssembly.authService
         controller.delegate = delegate
         return controller
     }
@@ -44,6 +45,7 @@ extension ScenesLoginFlowAssembly: ScenesLoginFlowAssemblyProtocol {
     func instantiateSignInVC(delegate: SignInViewControllerDelegate) -> SignInViewController {
 
         let controller: SignInViewController = UIStoryboard.loginFlowStoryboard.instantiateViewController()
+        controller.authService = servicesAssembly.authService
         controller.delegate = delegate
         return controller
     }

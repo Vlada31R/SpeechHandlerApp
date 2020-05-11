@@ -11,11 +11,12 @@ import Firebase
 
 protocol SignInViewControllerDelegate: class {
 
-    func signInViewControllerDidSignIn(_ viewController: SignInViewController, with user: User)
+    func signInViewControllerDidSignIn(_ viewController: SignInViewController)
 }
 
-class SignInViewController: BaseViewController, StoryboardIdentifiable {
+class SignInViewController: BaseViewController {
 
+    var authService: AuthService!
     weak var delegate: SignInViewControllerDelegate?
 
     @IBOutlet private weak var emailTextField: UITextField!
@@ -40,7 +41,8 @@ class SignInViewController: BaseViewController, StoryboardIdentifiable {
                                    return
                                }
 
-                               strongSelf.delegate?.signInViewControllerDidSignIn(strongSelf, with: user)
+                               strongSelf.authService.currentUser = user
+                               strongSelf.delegate?.signInViewControllerDidSignIn(strongSelf)
         })
     }
 }

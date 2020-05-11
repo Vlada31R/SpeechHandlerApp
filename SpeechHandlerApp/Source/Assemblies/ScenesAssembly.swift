@@ -17,4 +17,8 @@ class ScenesAssembly {
     lazy var scenesLoginFlowAssembly: ScenesLoginFlowAssemblyProtocol = {
         return ScenesLoginFlowAssembly(servicesAssembly: servicesAssembly)
     }()
+
+    lazy var scenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol = {
+        return ScenesMainFlowAssembly(servicesAssembly: servicesAssembly)
+    }()
 }

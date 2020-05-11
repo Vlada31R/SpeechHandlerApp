@@ -10,7 +10,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import Async
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, StoryboardIdentifiable {
 
     fileprivate var keyboardManager: IQKeyboardManager {
         return IQKeyboardManager.shared

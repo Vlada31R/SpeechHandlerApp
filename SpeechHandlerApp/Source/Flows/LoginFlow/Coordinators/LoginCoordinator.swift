@@ -14,13 +14,16 @@ class LoginCoordinator {
     fileprivate let window: UIWindow
 
     private let scenesAssembly: ScenesAssembly
+    private let completion: () -> ()
     private var loginController: LoginViewController?
 
     init(window: UIWindow,
-         scenesAssembly: ScenesAssembly) {
+         scenesAssembly: ScenesAssembly,
+         completion: @escaping () -> ()) {
 
         self.window = window
         self.scenesAssembly = scenesAssembly
+        self.completion = completion
     }
 }
 
@@ -56,17 +59,19 @@ extension LoginCoordinator: LoginViewControllerDelegate {
 // MARK: - SignUpViewControllerDelegate
 extension LoginCoordinator: SignUpViewControllerDelegate {
 
-    func signUpViewControllerDidSignUp(_ viewController: SignUpViewController, with user: User) {
+    func signUpViewControllerDidSignUp(_ viewController: SignUpViewController) {
 
         viewController.navigationController?.popViewController(animated: true)
+        completion()
     }
 }
 
 // MARK: - SignInViewControllerDelegate
 extension LoginCoordinator: SignInViewControllerDelegate {
 
-    func signInViewControllerDidSignIn(_ viewController: SignInViewController, with user: User) {
+    func signInViewControllerDidSignIn(_ viewController: SignInViewController) {
 
         viewController.navigationController?.popViewController(animated: true)
+        completion()
     }
 }

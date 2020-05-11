@@ -14,7 +14,7 @@ protocol LoginViewControllerDelegate: class {
     func loginViewControllerDidTapSignIn(_ viewController: LoginViewController)
 }
 
-class LoginViewController: BaseViewController, StoryboardIdentifiable {
+class LoginViewController: BaseViewController {
 
     weak var delegate: LoginViewControllerDelegate?
 

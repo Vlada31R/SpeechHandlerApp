@@ -11,6 +11,7 @@ import UIKit
 extension UIStoryboard {
 
     static let loginFlowStoryboard = UIStoryboard(name: "Login", bundle: nil)
+    static let mainFlowStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
 

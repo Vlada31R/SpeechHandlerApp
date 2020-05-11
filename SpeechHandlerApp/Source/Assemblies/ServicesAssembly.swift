@@ -7,5 +7,8 @@
 //
 
 class ServicesAssembly {
-    
+
+    lazy var authService: AuthService = {
+        return AuthService()
+    }()
 }

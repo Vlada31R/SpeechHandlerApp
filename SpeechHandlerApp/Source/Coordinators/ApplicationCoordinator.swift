@@ -16,6 +16,7 @@ class ApplicationCoordinator {
     private var coordAssembly: CoordinatorsAssemblyProtocol
 
     private var loginCoordinator: Coordinator?
+    private var mainCoordinator: Coordinator?
 
     init(window: UIWindow,
          scenesAssembly: ScenesAssembly,
@@ -34,7 +35,17 @@ extension ApplicationCoordinator: Coordinator {
 
         window.makeKeyAndVisible()
 
-        loginCoordinator = coordAssembly.makeLoginCoordinator(window: window)
+        let loginCoordCompletion = { [weak self] in
+
+            guard let strongSelf = self else { return }
+
+            strongSelf.mainCoordinator = strongSelf.coordAssembly.makeMainCoordinator(window: strongSelf.window)
+            strongSelf.mainCoordinator?.start()
+            strongSelf.loginCoordinator = nil
+        }
+
+        loginCoordinator = coordAssembly.makeLoginCoordinator(window: window,
+                                                              completion: loginCoordCompletion)
         loginCoordinator?.start()
     }
 }
