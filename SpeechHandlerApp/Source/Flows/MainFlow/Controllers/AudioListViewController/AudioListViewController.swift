@@ -16,4 +16,7 @@ class AudioListViewController: BaseViewController {
 
     var authService: AuthService!
     weak var delegate: AudioListViewControllerDelegate?
+
+    @IBOutlet private weak var listTableView: UITableView!
+    @IBOutlet weak var emptyContentView: UIView!
 }

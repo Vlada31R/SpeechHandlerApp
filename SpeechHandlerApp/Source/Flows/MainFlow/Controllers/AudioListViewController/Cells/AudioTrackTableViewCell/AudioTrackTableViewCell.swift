@@ -8,5 +8,11 @@
 
 import UIKit
 
-class AudioTrackTableViewCell: UITableViewCell {
+class AudioTrackTableViewCell: BaseTableViewCell {
+
+    @IBOutlet private var nameLabel: UILabel!
+
+    func configCell(name: String) {
+        nameLabel.text = name
+    }
 }

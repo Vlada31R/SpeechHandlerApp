@@ -95,6 +95,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fYW-2T-sJa"/>
                     </view>
+                    <connections>
+                        <outlet property="emptyContentView" destination="s9Y-dn-j7p" id="Fcl-mU-lVh"/>
+                        <outlet property="listTableView" destination="4Ww-XS-ehd" id="ehC-8J-KLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlW-hs-ePI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

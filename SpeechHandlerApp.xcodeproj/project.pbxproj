@@ -15,6 +15,9 @@
 		791934F8246977ED00655FFC /* AudioTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934F6246977ED00655FFC /* AudioTrackTableViewCell.swift */; };
 		791934F9246977ED00655FFC /* AudioTrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 791934F7246977ED00655FFC /* AudioTrackTableViewCell.xib */; };
 		791934FB2469805800655FFC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934FA2469805800655FFC /* AuthService.swift */; };
+		791934FE2469875800655FFC /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934FD2469875800655FFC /* BaseTableViewCell.swift */; };
+		79193500246987EA00655FFC /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934FF246987EA00655FFC /* ClassNameProtocol.swift */; };
+		791935022469882400655FFC /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791935012469882400655FFC /* UITableView+RegisterCells.swift */; };
 		79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */; };
 		79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E652467DD6700BA3B7B /* Assets.xcassets */; };
 		79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */; };
@@ -46,6 +49,9 @@
 		791934F6246977ED00655FFC /* AudioTrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrackTableViewCell.swift; sourceTree = "<group>"; };
 		791934F7246977ED00655FFC /* AudioTrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTrackTableViewCell.xib; sourceTree = "<group>"; };
 		791934FA2469805800655FFC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		791934FD2469875800655FFC /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		791934FF246987EA00655FFC /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		791935012469882400655FFC /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
 		79B12E592467DD6600BA3B7B /* SpeechHandlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechHandlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B12E652467DD6700BA3B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +112,15 @@
 				791934F7246977ED00655FFC /* AudioTrackTableViewCell.xib */,
 			);
 			path = AudioTrackTableViewCell;
+			sourceTree = "<group>";
+		};
+		791934FC2469873900655FFC /* BaseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				791934FF246987EA00655FFC /* ClassNameProtocol.swift */,
+				791934FD2469875800655FFC /* BaseTableViewCell.swift */,
+			);
+			path = BaseTableViewCell;
 			sourceTree = "<group>";
 		};
 		79B12E502467DD6500BA3B7B = {
@@ -346,6 +361,7 @@
 			children = (
 				79B12EA12468165600BA3B7B /* UIStoryboard+ViewController.swift */,
 				79B12EAA24683D4C00BA3B7B /* String.swift */,
+				791935012469882400655FFC /* UITableView+RegisterCells.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +369,7 @@
 		79B12EA624682FC600BA3B7B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				791934FC2469873900655FFC /* BaseTableViewCell */,
 				79B12EA724682FD400BA3B7B /* BaseViewController */,
 			);
 			path = Common;
@@ -487,6 +504,7 @@
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
 				791934F3246973D700655FFC /* AudioListViewController.swift in Sources */,
+				791934FE2469875800655FFC /* BaseTableViewCell.swift in Sources */,
 				79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */,
 				79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */,
 				79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */,
@@ -501,6 +519,8 @@
 				79B12E9D246814B300BA3B7B /* SignInViewController.swift in Sources */,
 				79B12EAB24683D4C00BA3B7B /* String.swift in Sources */,
 				791934F8246977ED00655FFC /* AudioTrackTableViewCell.swift in Sources */,
+				791935022469882400655FFC /* UITableView+RegisterCells.swift in Sources */,
+				79193500246987EA00655FFC /* ClassNameProtocol.swift in Sources */,
 				79B12E802467F1E200BA3B7B /* ApplicationCoordinator.swift in Sources */,
 				79B12EA22468165600BA3B7B /* UIStoryboard+ViewController.swift in Sources */,
 			);
