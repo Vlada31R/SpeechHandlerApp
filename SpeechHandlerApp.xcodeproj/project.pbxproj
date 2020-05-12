@@ -11,6 +11,7 @@
 		790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE4246A7DC9009481EB /* TrackModel.swift */; };
 		790DBBE8246A8779009481EB /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE7246A8779009481EB /* RecordingViewController.swift */; };
 		790DBBEA246A92B6009481EB /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE9246A92B6009481EB /* ShadowButton.swift */; };
+		790DBBEE246AE044009481EB /* SaveAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBED246AE044009481EB /* SaveAudioViewController.swift */; };
 		791934EC246972C400655FFC /* ScenesMainFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */; };
 		791934EE2469735400655FFC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934ED2469735400655FFC /* MainCoordinator.swift */; };
 		791934F0246973A600655FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791934EF246973A600655FFC /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		790DBBE4246A7DC9009481EB /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		790DBBE7246A8779009481EB /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		790DBBE9246A92B6009481EB /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		790DBBED246AE044009481EB /* SaveAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAudioViewController.swift; sourceTree = "<group>"; };
 		791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesMainFlowAssembly.swift; sourceTree = "<group>"; };
 		791934ED2469735400655FFC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		791934EF246973A600655FFC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				790DBBE9246A92B6009481EB /* ShadowButton.swift */,
 			);
 			path = ShadowButton;
+			sourceTree = "<group>";
+		};
+		790DBBEC246AE00A009481EB /* SaveAudioViewController */ = {
+			isa = PBXGroup;
+			children = (
+				790DBBED246AE044009481EB /* SaveAudioViewController.swift */,
+			);
+			path = SaveAudioViewController;
 			sourceTree = "<group>";
 		};
 		791934F1246973B700655FFC /* AudioListViewController */ = {
@@ -321,6 +331,7 @@
 			children = (
 				791934F1246973B700655FFC /* AudioListViewController */,
 				790DBBE6246A860E009481EB /* RecordingViewController */,
+				790DBBEC246AE00A009481EB /* SaveAudioViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -546,6 +557,7 @@
 				790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */,
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
+				790DBBEE246AE044009481EB /* SaveAudioViewController.swift in Sources */,
 				791934F3246973D700655FFC /* AudioListViewController.swift in Sources */,
 				791934FE2469875800655FFC /* BaseTableViewCell.swift in Sources */,
 				79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */,
