@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B1ED3D08EEC3625BE70A6A5 /* libPods-SpeechHandlerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */; };
+		790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE4246A7DC9009481EB /* TrackModel.swift */; };
 		791934EC246972C400655FFC /* ScenesMainFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */; };
 		791934EE2469735400655FFC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934ED2469735400655FFC /* MainCoordinator.swift */; };
 		791934F0246973A600655FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791934EF246973A600655FFC /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		150D680BEF98CB57CB4662E5 /* Pods-SpeechHandlerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.debug.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeechHandlerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		790DBBE4246A7DC9009481EB /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesMainFlowAssembly.swift; sourceTree = "<group>"; };
 		791934ED2469735400655FFC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		791934EF246973A600655FFC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		790DBBE2246A7D8B009481EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				791934FC2469873900655FFC /* BaseTableViewCell */,
+				79B12EA724682FD400BA3B7B /* BaseViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		790DBBE3246A7DA4009481EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				790DBBE4246A7DC9009481EB /* TrackModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		791934F1246973B700655FFC /* AudioListViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,8 +388,8 @@
 		79B12EA624682FC600BA3B7B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				791934FC2469873900655FFC /* BaseTableViewCell */,
-				79B12EA724682FD400BA3B7B /* BaseViewController */,
+				790DBBE3246A7DA4009481EB /* Models */,
+				790DBBE2246A7D8B009481EB /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -501,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791934EE2469735400655FFC /* MainCoordinator.swift in Sources */,
+				790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */,
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
 				791934F3246973D700655FFC /* AudioListViewController.swift in Sources */,
