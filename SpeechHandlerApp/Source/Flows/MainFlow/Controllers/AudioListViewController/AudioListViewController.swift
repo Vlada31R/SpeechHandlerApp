@@ -18,7 +18,7 @@ class AudioListViewController: BaseViewController {
     var authService: AuthService!
     weak var delegate: AudioListViewControllerDelegate?
 
-    private var trackModels: [TrackModel] = [] {
+    var trackModels: [TrackModel] = [] {
         didSet {
             self.reloadUI()
         }
@@ -47,7 +47,10 @@ class AudioListViewController: BaseViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension AudioListViewController: UITableViewDelegate {
+extension AudioListViewController: UITableViewDelegate {}
+
+// MARK: - UITableViewDataSource
+extension AudioListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trackModels.count

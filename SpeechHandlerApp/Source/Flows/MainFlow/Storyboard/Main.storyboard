@@ -19,7 +19,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="delegate" destination="mle-r1-bsE" id="CBs-kZ-Ucw"/>
+                                    <outlet property="dataSource" destination="mle-r1-bsE" id="U4F-bC-xc9"/>
+                                    <outlet property="delegate" destination="mle-r1-bsE" id="TU2-EH-AOI"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-dn-j7p">

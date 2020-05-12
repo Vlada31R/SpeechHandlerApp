@@ -67,4 +67,13 @@ extension MainCoordinator: SaveAudioViewControllerDelegate {
 
         viewController.navigationController?.popToViewController(listVC, animated: true)
     }
+
+    func saveAudioViewController(_ viewController: SaveAudioViewController, didSave model: TrackModel) {
+
+        guard let listVC = audioListController else { return }
+
+        viewController.navigationController?.popToViewController(listVC, animated: true)
+
+        listVC.trackModels.append(model)
+    }
 }

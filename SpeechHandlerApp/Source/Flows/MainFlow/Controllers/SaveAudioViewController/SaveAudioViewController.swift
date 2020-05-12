@@ -11,6 +11,7 @@ import UIKit
 protocol SaveAudioViewControllerDelegate: class {
 
     func saveAudioViewControllerDidCancel(_ viewController: SaveAudioViewController)
+    func saveAudioViewController(_ viewController: SaveAudioViewController, didSave model: TrackModel)
 }
 
 class SaveAudioViewController: BaseViewController {
@@ -30,6 +31,19 @@ class SaveAudioViewController: BaseViewController {
     }
 
     @IBAction func didTapSaveButton(_ sender: UIButton) {
+
+        guard let trackName = nameTextField.text,
+              !trackName.isEmpty
+        else {
+            self.showAlert(message: "Please enter track name")
+            return
+        }
+
+        let trackModel = TrackModel(name: trackName,
+                                    description: descriptionTextField.text,
+                                    containerFileName: filePath.lastPathComponent)
+        
+        delegate?.saveAudioViewController(self, didSave: trackModel)
     }
     
     @IBAction func didTapCancelButton(_ sender: UIButton) {
