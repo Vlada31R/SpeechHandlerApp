@@ -20,6 +20,7 @@ class RecordingViewController: BaseViewController {
 
     private var recordingSession: AVAudioSession!
     private var audioRecorder: AVAudioRecorder!
+    private var filePath: URL?
 
     @IBOutlet private weak var recordingButton: UIButton!
 
@@ -72,7 +73,7 @@ private extension RecordingViewController {
     func startRecording() {
 
         let fileName = "\(Date())file.m4a"
-        let audioFilename = self.getDocumentsDirectory().appendingPathComponent(fileName)
+        filePath = self.getDocumentsDirectory().appendingPathComponent(fileName)
 
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -82,7 +83,9 @@ private extension RecordingViewController {
         ]
 
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            guard let path = filePath else { return }
+
+            audioRecorder = try AVAudioRecorder(url: path, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.prepareToRecord()
             audioRecorder.record()
