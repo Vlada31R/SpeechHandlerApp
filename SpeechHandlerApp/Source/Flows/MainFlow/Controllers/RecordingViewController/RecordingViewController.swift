@@ -11,7 +11,8 @@ import Async
 import AVFoundation
 
 protocol RecordingViewControllerDelegate: class {
-    
+
+    func recordingViewController(_ viewController: RecordingViewController, recordAudioAt path: URL)
 }
 
 class RecordingViewController: BaseViewController {
@@ -113,8 +114,8 @@ private extension RecordingViewController {
         audioRecorder.stop()
         audioRecorder = nil
 
-        if success {
-
+        if success, let path = filePath {
+            delegate?.recordingViewController(self, recordAudioAt: path)
         } else {
             recordingButton.setTitle("Tap to Re-record", for: .normal)
         }

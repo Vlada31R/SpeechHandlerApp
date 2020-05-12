@@ -49,5 +49,16 @@ extension MainCoordinator: AudioListViewControllerDelegate {
 
 // MARK: - RecordingViewControllerDelegate
 extension MainCoordinator: RecordingViewControllerDelegate {
+    
+    func recordingViewController(_ viewController: RecordingViewController, recordAudioAt path: URL) {
+
+        let saveAudioVC = scenesAssembly.scenesMainFlowAssembly.instantiateSaveAudioVC(filePath: path,
+                                                                                       delegate: self)
+        viewController.navigationController?.pushViewController(saveAudioVC, animated: true)
+    }
+}
+
+// MARK: - SaveAudioViewControllerDelegate
+extension MainCoordinator: SaveAudioViewControllerDelegate {
 
 }

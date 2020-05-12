@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol SaveAudioViewControllerDelegate: class {
+}
+
 class SaveAudioViewController: BaseViewController {
 
+    var filePath: URL!
+
+    weak var delegate: SaveAudioViewControllerDelegate?
 }

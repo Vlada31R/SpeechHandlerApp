@@ -13,6 +13,8 @@ protocol ScenesMainFlowAssemblyProtocol {
 
     func instantiateAudioListVC(delegate: AudioListViewControllerDelegate) -> AudioListViewController
     func instantiateRecordingVC(delegate: RecordingViewControllerDelegate) -> RecordingViewController
+    func instantiateSaveAudioVC(filePath: URL,
+                                delegate: SaveAudioViewControllerDelegate) -> SaveAudioViewController
 }
 
 class ScenesMainFlowAssembly {
@@ -38,6 +40,15 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
     func instantiateRecordingVC(delegate: RecordingViewControllerDelegate) -> RecordingViewController {
 
         let controller: RecordingViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
+        controller.delegate = delegate
+        return controller
+    }
+
+    func instantiateSaveAudioVC(filePath: URL,
+                                delegate: SaveAudioViewControllerDelegate) -> SaveAudioViewController {
+
+        let controller: SaveAudioViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
+        controller.filePath = filePath
         controller.delegate = delegate
         return controller
     }
