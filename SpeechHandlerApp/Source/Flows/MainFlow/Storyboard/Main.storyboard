@@ -211,6 +211,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCancelButton:" destination="RnV-1v-Vie" eventType="touchUpInside" id="vbI-jK-7Z3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-lA-Fih">
                                 <rect key="frame" x="235" y="259" width="105" height="45"/>
@@ -227,6 +230,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSaveButton:" destination="RnV-1v-Vie" eventType="touchUpInside" id="Bss-fb-WN1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -255,6 +261,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pc0-vg-zEs"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="MSR-v4-mB7" id="u1d-e7-XVD"/>
+                        <outlet property="nameTextField" destination="pi6-up-udG" id="i5v-GM-Iut"/>
+                        <outlet property="transformSwitch" destination="Ixl-Uo-RiN" id="pOb-D7-TBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leK-ft-Fr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -75,4 +75,26 @@ extension BaseViewController {
             self.present(alert, animated: true)
         }
     }
+
+    func showDiscardChangesAlert(discardAction: @escaping ()-> ()) {
+
+        let alert = UIAlertController(title: nil,
+                                      message: "Do you want to discard changes?",
+                                      preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .default,
+                                         handler: nil)
+
+        let discardAction = UIAlertAction(title: "Discard",
+                                          style: .destructive,
+                                          handler: { action in discardAction() })
+
+        alert.addAction(cancelAction)
+        alert.addAction(discardAction)
+
+        Async.main {
+            self.present(alert, animated: true)
+        }
+    }
 }

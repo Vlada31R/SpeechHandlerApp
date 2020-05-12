@@ -61,4 +61,10 @@ extension MainCoordinator: RecordingViewControllerDelegate {
 // MARK: - SaveAudioViewControllerDelegate
 extension MainCoordinator: SaveAudioViewControllerDelegate {
 
+    func saveAudioViewControllerDidCancel(_ viewController: SaveAudioViewController) {
+
+        guard let listVC = audioListController else { return }
+
+        viewController.navigationController?.popToViewController(listVC, animated: true)
+    }
 }
