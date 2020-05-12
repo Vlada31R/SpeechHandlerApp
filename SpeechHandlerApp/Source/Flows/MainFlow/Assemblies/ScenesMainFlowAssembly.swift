@@ -12,6 +12,7 @@ import Firebase
 protocol ScenesMainFlowAssemblyProtocol {
 
     func instantiateAudioListVC(delegate: AudioListViewControllerDelegate) -> AudioListViewController
+    func instantiateRecordingVC(delegate: RecordingViewControllerDelegate) -> RecordingViewController
 }
 
 class ScenesMainFlowAssembly {
@@ -30,6 +31,13 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
 
         let controller: AudioListViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
         controller.authService = servicesAssembly.authService
+        controller.delegate = delegate
+        return controller
+    }
+
+    func instantiateRecordingVC(delegate: RecordingViewControllerDelegate) -> RecordingViewController {
+
+        let controller: RecordingViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
         controller.delegate = delegate
         return controller
     }

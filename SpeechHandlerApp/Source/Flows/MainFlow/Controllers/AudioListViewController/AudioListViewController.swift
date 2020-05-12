@@ -10,6 +10,7 @@ import UIKit
 
 protocol AudioListViewControllerDelegate: class {
 
+    func audioListViewControllerDidCreateNewTrack(_ viewController: AudioListViewController)
 }
 
 class AudioListViewController: BaseViewController {
@@ -36,6 +37,8 @@ class AudioListViewController: BaseViewController {
     }
 
     @IBAction func didTapCreateNewButton(_ sender: UIButton) {
+
+        delegate?.audioListViewControllerDidCreateNewTrack(self)
     }
 
     @objc func didTapMenuButton() {

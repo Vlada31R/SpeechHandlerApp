@@ -38,4 +38,16 @@ extension MainCoordinator: Coordinator {
 }
 
 // MARK: - AudioListViewControllerDelegate
-extension MainCoordinator: AudioListViewControllerDelegate {}
+extension MainCoordinator: AudioListViewControllerDelegate {
+
+    func audioListViewControllerDidCreateNewTrack(_ viewController: AudioListViewController) {
+
+        let recordingVC = scenesAssembly.scenesMainFlowAssembly.instantiateRecordingVC(delegate: self)
+        viewController.navigationController?.pushViewController(recordingVC, animated: true)
+    }
+}
+
+// MARK: - RecordingViewControllerDelegate
+extension MainCoordinator: RecordingViewControllerDelegate {
+
+}

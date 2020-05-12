@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6B1ED3D08EEC3625BE70A6A5 /* libPods-SpeechHandlerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */; };
 		790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE4246A7DC9009481EB /* TrackModel.swift */; };
+		790DBBE8246A8779009481EB /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE7246A8779009481EB /* RecordingViewController.swift */; };
+		790DBBEA246A92B6009481EB /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE9246A92B6009481EB /* ShadowButton.swift */; };
 		791934EC246972C400655FFC /* ScenesMainFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */; };
 		791934EE2469735400655FFC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934ED2469735400655FFC /* MainCoordinator.swift */; };
 		791934F0246973A600655FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791934EF246973A600655FFC /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		150D680BEF98CB57CB4662E5 /* Pods-SpeechHandlerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.debug.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeechHandlerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790DBBE4246A7DC9009481EB /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		790DBBE7246A8779009481EB /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		790DBBE9246A92B6009481EB /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		791934EB246972C400655FFC /* ScenesMainFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesMainFlowAssembly.swift; sourceTree = "<group>"; };
 		791934ED2469735400655FFC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		791934EF246973A600655FFC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		790DBBE2246A7D8B009481EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				790DBBEB246A92E1009481EB /* ShadowButton */,
 				791934FC2469873900655FFC /* BaseTableViewCell */,
 				79B12EA724682FD400BA3B7B /* BaseViewController */,
 			);
@@ -105,6 +110,22 @@
 				790DBBE4246A7DC9009481EB /* TrackModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		790DBBE6246A860E009481EB /* RecordingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				790DBBE7246A8779009481EB /* RecordingViewController.swift */,
+			);
+			path = RecordingViewController;
+			sourceTree = "<group>";
+		};
+		790DBBEB246A92E1009481EB /* ShadowButton */ = {
+			isa = PBXGroup;
+			children = (
+				790DBBE9246A92B6009481EB /* ShadowButton.swift */,
+			);
+			path = ShadowButton;
 			sourceTree = "<group>";
 		};
 		791934F1246973B700655FFC /* AudioListViewController */ = {
@@ -299,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				791934F1246973B700655FFC /* AudioListViewController */,
+				790DBBE6246A860E009481EB /* RecordingViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -520,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791934EE2469735400655FFC /* MainCoordinator.swift in Sources */,
+				790DBBE8246A8779009481EB /* RecordingViewController.swift in Sources */,
 				790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */,
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
@@ -533,6 +556,7 @@
 				79B12EA924682FEF00BA3B7B /* BaseViewController.swift in Sources */,
 				79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */,
 				79B12E992468148100BA3B7B /* LoginViewController.swift in Sources */,
+				790DBBEA246A92B6009481EB /* ShadowButton.swift in Sources */,
 				79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */,
 				79B12E9B2468149800BA3B7B /* SignUpViewController.swift in Sources */,
 				79B12E862467F3AF00BA3B7B /* CoordinatorsAssembly.swift in Sources */,

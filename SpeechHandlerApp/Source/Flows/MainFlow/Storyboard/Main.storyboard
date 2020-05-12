@@ -113,5 +113,48 @@
             </objects>
             <point key="canvasLocation" x="-122.40000000000001" y="94.902548725637189"/>
         </scene>
+        <!--Recording View Controller-->
+        <scene sceneID="qW9-eW-7lW">
+            <objects>
+                <viewController storyboardIdentifier="RecordingViewController" id="gbt-Lh-LKZ" customClass="RecordingViewController" customModule="SpeechHandlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27L-NZ-8EU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-bk-axj" customClass="ShadowButton" customModule="SpeechHandlerApp" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="130" width="250" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="PuW-5x-mkJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="70"/>
+                                <inset key="titleEdgeInsets" minX="-115" minY="200" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="61" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Start recording" image="microphone">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRecordingButton:" destination="gbt-Lh-LKZ" eventType="touchUpInside" id="Sey-Ye-qjX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pf8-bk-axj" firstAttribute="top" secondItem="FKL-gb-UIF" secondAttribute="top" constant="130" id="PYr-2Z-D6G"/>
+                            <constraint firstItem="Pf8-bk-axj" firstAttribute="centerX" secondItem="27L-NZ-8EU" secondAttribute="centerX" id="eQo-E1-0Hj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FKL-gb-UIF"/>
+                    </view>
+                    <connections>
+                        <outlet property="recordingButton" destination="Pf8-bk-axj" id="JeA-gQ-fTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpf-bc-8fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661.60000000000002" y="94.902548725637189"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="128" height="128"/>
+    </resources>
 </document>
