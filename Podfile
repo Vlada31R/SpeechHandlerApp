@@ -10,6 +10,8 @@ target 'SpeechHandlerApp' do
 
   pod 'AsyncSwift', '~> 2.0.4'
 
+  pod 'Alamofire'
+
   pod 'SwiftLint'
 
 end

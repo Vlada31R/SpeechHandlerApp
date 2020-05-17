@@ -49,6 +49,7 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
 
         let controller: SaveAudioViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
         controller.filePath = filePath
+        controller.networkManager = servicesAssembly.networkManager
         controller.delegate = delegate
         return controller
     }

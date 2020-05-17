@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.1.0)
   - AsyncSwift (2.0.4)
   - Firebase/Analytics (6.22.0):
     - Firebase/Core
@@ -81,6 +82,7 @@ PODS:
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - Alamofire
   - AsyncSwift (~> 2.0.4)
   - Firebase/Analytics
   - Firebase/Auth
@@ -89,6 +91,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - AsyncSwift
     - Firebase
     - FirebaseAnalytics
@@ -109,6 +112,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
   FirebaseAnalytics: 83f822fd0d33a46f49f89b8c3ab16ab4d89df08a
@@ -128,6 +132,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: fefd3a48c3c94e576548811727b1134b817d987d
+PODFILE CHECKSUM: f3ccb51f3ceddad796dea704e59d692560a236a7
 
 COCOAPODS: 1.7.5

@@ -17,6 +17,7 @@ protocol SaveAudioViewControllerDelegate: class {
 class SaveAudioViewController: BaseViewController {
 
     var filePath: URL!
+    var networkManager: NetworkManager!
 
     weak var delegate: SaveAudioViewControllerDelegate?
 
@@ -42,8 +43,10 @@ class SaveAudioViewController: BaseViewController {
         let trackModel = TrackModel(name: trackName,
                                     description: descriptionTextField.text,
                                     containerFileName: filePath.lastPathComponent)
-        
-        delegate?.saveAudioViewController(self, didSave: trackModel)
+
+        networkManager.postData(input: trackModel, data: try! Data(contentsOf: filePath), fileName: filePath.lastPathComponent){ response in
+            self.delegate?.saveAudioViewController(self, didSave: trackModel)
+        }
     }
     
     @IBAction func didTapCancelButton(_ sender: UIButton) {

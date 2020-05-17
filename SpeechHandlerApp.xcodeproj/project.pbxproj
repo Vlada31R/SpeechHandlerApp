@@ -22,6 +22,11 @@
 		791934FE2469875800655FFC /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934FD2469875800655FFC /* BaseTableViewCell.swift */; };
 		79193500246987EA00655FFC /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791934FF246987EA00655FFC /* ClassNameProtocol.swift */; };
 		791935022469882400655FFC /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791935012469882400655FFC /* UITableView+RegisterCells.swift */; };
+		791AC9792471163E0031E48C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC9782471163E0031E48C /* NetworkManager.swift */; };
+		791AC97B247116F10031E48C /* RequestConfiguratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC97A247116F10031E48C /* RequestConfiguratable.swift */; };
+		791AC97D247117F60031E48C /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC97C247117F60031E48C /* NetworkingConstants.swift */; };
+		791AC9802471292E0031E48C /* PostTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC97F2471292E0031E48C /* PostTrackResponse.swift */; };
+		791AC982247148820031E48C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC981247148820031E48C /* Error.swift */; };
 		79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */; };
 		79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E652467DD6700BA3B7B /* Assets.xcassets */; };
 		79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */; };
@@ -60,6 +65,11 @@
 		791934FD2469875800655FFC /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		791934FF246987EA00655FFC /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
 		791935012469882400655FFC /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
+		791AC9782471163E0031E48C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		791AC97A247116F10031E48C /* RequestConfiguratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguratable.swift; sourceTree = "<group>"; };
+		791AC97C247117F60031E48C /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
+		791AC97F2471292E0031E48C /* PostTrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTrackResponse.swift; sourceTree = "<group>"; };
+		791AC981247148820031E48C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		79B12E592467DD6600BA3B7B /* SpeechHandlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechHandlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B12E652467DD6700BA3B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 		790DBBE3246A7DA4009481EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				791AC97E247129150031E48C /* Decodable */,
 				790DBBE4246A7DC9009481EB /* TrackModel.swift */,
 			);
 			path = Models;
@@ -171,6 +182,25 @@
 				791934FD2469875800655FFC /* BaseTableViewCell.swift */,
 			);
 			path = BaseTableViewCell;
+			sourceTree = "<group>";
+		};
+		791AC9772471159C0031E48C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				791AC9782471163E0031E48C /* NetworkManager.swift */,
+				791AC97A247116F10031E48C /* RequestConfiguratable.swift */,
+				791AC97C247117F60031E48C /* NetworkingConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		791AC97E247129150031E48C /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				791AC97F2471292E0031E48C /* PostTrackResponse.swift */,
+				791AC981247148820031E48C /* Error.swift */,
+			);
+			path = Decodable;
 			sourceTree = "<group>";
 		};
 		79B12E502467DD6500BA3B7B = {
@@ -271,6 +301,7 @@
 		79B12E782467F01800BA3B7B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				791AC9772471159C0031E48C /* Network */,
 				791934FA2469805800655FFC /* AuthService.swift */,
 			);
 			path = Managers;
@@ -563,10 +594,12 @@
 				79B12E9F2468154E00BA3B7B /* ScenesLoginFlowAssembly.swift in Sources */,
 				79B12E822467F35600BA3B7B /* ScenesAssembly.swift in Sources */,
 				79B12EA42468194300BA3B7B /* LoginCoordinator.swift in Sources */,
+				791AC97D247117F60031E48C /* NetworkingConstants.swift in Sources */,
 				791934FB2469805800655FFC /* AuthService.swift in Sources */,
 				791934EC246972C400655FFC /* ScenesMainFlowAssembly.swift in Sources */,
 				79B12EA924682FEF00BA3B7B /* BaseViewController.swift in Sources */,
 				79B12E7C2467F15A00BA3B7B /* AppAssembly.swift in Sources */,
+				791AC982247148820031E48C /* Error.swift in Sources */,
 				79B12E992468148100BA3B7B /* LoginViewController.swift in Sources */,
 				790DBBEA246A92B6009481EB /* ShadowButton.swift in Sources */,
 				79B12E7E2467F19600BA3B7B /* Coordinator.swift in Sources */,
@@ -576,9 +609,12 @@
 				79B12EAB24683D4C00BA3B7B /* String.swift in Sources */,
 				791934F8246977ED00655FFC /* AudioTrackTableViewCell.swift in Sources */,
 				791935022469882400655FFC /* UITableView+RegisterCells.swift in Sources */,
+				791AC9792471163E0031E48C /* NetworkManager.swift in Sources */,
+				791AC9802471292E0031E48C /* PostTrackResponse.swift in Sources */,
 				79193500246987EA00655FFC /* ClassNameProtocol.swift in Sources */,
 				79B12E802467F1E200BA3B7B /* ApplicationCoordinator.swift in Sources */,
 				79B12EA22468165600BA3B7B /* UIStoryboard+ViewController.swift in Sources */,
+				791AC97B247116F10031E48C /* RequestConfiguratable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

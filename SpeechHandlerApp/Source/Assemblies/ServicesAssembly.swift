@@ -11,4 +11,8 @@ class ServicesAssembly {
     lazy var authService: AuthService = {
         return AuthService()
     }()
+
+    lazy var networkManager: NetworkManager = {
+        return NetworkManagerImp()
+    }()
 }
