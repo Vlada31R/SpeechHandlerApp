@@ -44,8 +44,19 @@ class SaveAudioViewController: BaseViewController {
                                     description: descriptionTextField.text,
                                     containerFileName: filePath.lastPathComponent)
 
-        networkManager.postData(input: trackModel, data: try! Data(contentsOf: filePath), fileName: filePath.lastPathComponent){ response in
-            self.delegate?.saveAudioViewController(self, didSave: trackModel)
+        networkManager.postData(input: trackModel,
+                                data: try! Data(contentsOf: filePath),
+                                fileName: filePath.lastPathComponent) { response in
+
+                                    Timer.scheduledTimer(withTimeInterval: TimeInterval(response?.check_wait ?? 30),
+                                                         repeats: false) { timer in
+
+                                        let job = Job(id: response?.id ?? 0)
+
+                                        self.networkManager.getData(input: job) { response in
+                                            print(response)
+                                        }
+                                    }
         }
     }
     

@@ -46,14 +46,12 @@ extension NetworkManagerImp: NetworkManager {
             .validate()
             .response { (response) in
                 var info: T.Response?
-                if let getData = response.data {
-                    info = try? JSONDecoder().decode(T.Response.self, from: getData)
-                }
 
-                if info == nil, let getData = response.data {
-                    let error = try? JSONDecoder().decode(Error.self, from: getData)
-                }
+                if let responseData = response.data {
+                    let error = try? JSONDecoder().decode(Error.self, from: responseData)
 
+                    info = error == nil ? try? JSONDecoder().decode(T.Response.self, from: responseData) : nil
+                }
                 completionHandler(info)
             }
         } catch {
@@ -79,6 +77,7 @@ extension NetworkManagerImp: NetworkManager {
             .response { (response) in
                 var info: T?
                 if let data = response.data {
+                    print(String(data: data, encoding: String.Encoding.utf8))
                     info = try? JSONDecoder().decode(T.self, from: data)
                 }
                 completionHandler(info)
