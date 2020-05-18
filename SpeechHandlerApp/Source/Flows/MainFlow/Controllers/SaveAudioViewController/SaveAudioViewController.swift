@@ -44,6 +44,12 @@ class SaveAudioViewController: BaseViewController {
                                     description: descriptionTextField.text,
                                     containerFileName: filePath.lastPathComponent)
 
+        guard transformSwitch.isOn
+        else {
+            delegate?.saveAudioViewController(self, didSave: trackModel)
+            return
+        }
+
         networkManager.postData(input: trackModel,
                                 data: try! Data(contentsOf: filePath),
                                 fileName: filePath.lastPathComponent) { response in
@@ -54,7 +60,7 @@ class SaveAudioViewController: BaseViewController {
                                         let job = Job(id: response?.id ?? 0)
 
                                         self.networkManager.getData(input: job) { response in
-                                            print(response)
+                                            self.delegate?.saveAudioViewController(self, didSave: trackModel)
                                         }
                                     }
         }
