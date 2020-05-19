@@ -60,7 +60,12 @@ class SaveAudioViewController: BaseViewController {
                                         let job = Job(id: response?.id ?? 0)
 
                                         self.networkManager.getData(input: job) { response in
-                                            self.delegate?.saveAudioViewController(self, didSave: trackModel)
+
+                                            let text = ConvertedText(text: response ?? "")
+
+                                            self.networkManager.getData(input: text) { response in
+                                                self.delegate?.saveAudioViewController(self, didSave: trackModel)
+                                            }
                                         }
                                     }
         }

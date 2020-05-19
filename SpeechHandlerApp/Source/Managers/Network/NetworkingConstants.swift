@@ -8,8 +8,6 @@
 
 struct NetworkingConstants {
 
-    static let baseURL = "https://api.speechmatics.com/v1.0/"
-
     static let user = "user"
     static let userId = "79960"
 

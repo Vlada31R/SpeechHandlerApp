@@ -39,9 +39,7 @@ extension NetworkManagerImp: NetworkManager {
 
             AF.upload(multipartFormData: { (multipartFormData) in
                 multipartFormData.append(data, withName: "data_file", fileName: fileName, mimeType: "audio/m4a")
-                for (key, value) in input.parameters {
-                    multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-                }
+                multipartFormData.append("en-US".data(using: String.Encoding.utf8)!, withName: "model")
             },to: url)
             .validate()
             .response { (response) in

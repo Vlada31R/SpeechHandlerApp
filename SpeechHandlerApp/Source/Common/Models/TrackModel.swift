@@ -21,6 +21,10 @@ extension TrackModel: RequestConfiguratable {
 
     typealias Response = PostTrackResponse
 
+    var baseURL: String {
+        return "https://api.speechmatics.com/v1.0/"
+    }
+
     var path: String {
         return "/v1.0" + "/" + NetworkingConstants.user + "/" + NetworkingConstants.userId + "/" + NetworkingConstants.jobs + "/"
     }
@@ -28,7 +32,6 @@ extension TrackModel: RequestConfiguratable {
     var parameters: [String: String] {
 
         var paramDict: [String: String] = [:]
-        paramDict["model"] = "en-US"
         return paramDict
     }
 
@@ -39,6 +42,7 @@ extension TrackModel: RequestConfiguratable {
     var queryItems: [String: String] {
 
         var paramDict: [String: String] = [:]
+        paramDict[NetworkingConstants.authToken] = NetworkingConstants.authTokenValue
         return paramDict
     }
 }

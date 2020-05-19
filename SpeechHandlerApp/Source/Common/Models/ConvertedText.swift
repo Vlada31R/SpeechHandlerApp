@@ -1,46 +1,45 @@
 //
-//  Job.swift
+//  ConvertedText.swift
 //  SpeechHandlerApp
 //
-//  Created by Vlada Radchenko on 5/18/20.
+//  Created by Vlada Radchenko on 5/20/20.
 //  Copyright © 2020 Vlada Radchenko. All rights reserved.
 //
 
 import Alamofire
 
-struct Job {
+struct ConvertedText {
 
-    let id: Int
+    let text: String
 }
 
 // MARK: - RequestConfiguratable
-extension Job: RequestConfiguratable {
+extension ConvertedText: RequestConfiguratable {
 
     typealias Response = String
 
     var baseURL: String {
-        return "https://api.speechmatics.com/v1.0/"
+        return "http://bark.phon.ioc.ee"
     }
 
     var path: String {
-        return "/v1.0" + "/" + NetworkingConstants.user + "/" + NetworkingConstants.userId + "/" + NetworkingConstants.jobs + "/\(id)/transcript"
+        return "/punctuator"
     }
 
     var parameters: [String: String] {
 
         var paramDict: [String: String] = [:]
+        paramDict["text"] = text
         return paramDict
     }
 
     var method: HTTPMethod {
-        return .get
+        return .post
     }
 
     var queryItems: [String: String] {
 
         var paramDict: [String: String] = [:]
-        paramDict["format"] = "txt"
-        paramDict[NetworkingConstants.authToken] = NetworkingConstants.authTokenValue
         return paramDict
     }
 }
