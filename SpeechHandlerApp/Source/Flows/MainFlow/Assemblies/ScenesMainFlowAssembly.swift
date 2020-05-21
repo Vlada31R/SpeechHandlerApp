@@ -32,7 +32,6 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
     func instantiateAudioListVC(delegate: AudioListViewControllerDelegate) -> AudioListViewController {
 
         let controller: AudioListViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
-        controller.authService = servicesAssembly.authService
         controller.delegate = delegate
         return controller
     }
@@ -50,6 +49,7 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
         let controller: SaveAudioViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
         controller.filePath = filePath
         controller.networkManager = servicesAssembly.networkManager
+        controller.firebaseService = servicesAssembly.firebaseService
         controller.delegate = delegate
         return controller
     }

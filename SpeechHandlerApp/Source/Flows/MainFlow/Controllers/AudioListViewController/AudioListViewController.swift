@@ -15,7 +15,6 @@ protocol AudioListViewControllerDelegate: class {
 
 class AudioListViewController: BaseViewController {
 
-    var authService: AuthService!
     weak var delegate: AudioListViewControllerDelegate?
 
     var trackModels: [TrackModel] = [] {

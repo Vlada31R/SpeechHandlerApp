@@ -14,6 +14,15 @@ struct TrackModel {
     let description: String?
     
     let containerFileName: String
+
+    var text: String?
+
+    func model() -> [String: Any] {
+        return ["name" : name,
+         "description" : description,
+    "containerFileName": containerFileName,
+                "text" : text]
+    }
 }
 
 // MARK: - RequestConfiguratable

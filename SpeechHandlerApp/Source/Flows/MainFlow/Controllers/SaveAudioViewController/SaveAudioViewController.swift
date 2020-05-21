@@ -18,6 +18,7 @@ class SaveAudioViewController: BaseViewController {
 
     var filePath: URL!
     var networkManager: NetworkManager!
+    var firebaseService: FirebaseService!
 
     weak var delegate: SaveAudioViewControllerDelegate?
 
@@ -40,7 +41,7 @@ class SaveAudioViewController: BaseViewController {
             return
         }
 
-        let trackModel = TrackModel(name: trackName,
+        var trackModel = TrackModel(name: trackName,
                                     description: descriptionTextField.text,
                                     containerFileName: filePath.lastPathComponent)
 
@@ -62,8 +63,12 @@ class SaveAudioViewController: BaseViewController {
                                         self.networkManager.getData(input: job) { response in
 
                                             let text = ConvertedText(text: response ?? "")
+                                            trackModel.text = response
 
                                             self.networkManager.getData(input: text) { response in
+
+                                                trackModel.text = response
+                                                self.firebaseService.save(model: trackModel)
                                                 self.delegate?.saveAudioViewController(self, didSave: trackModel)
                                             }
                                         }
