@@ -75,8 +75,7 @@ extension NetworkManagerImp: NetworkManager {
             .response { (response) in
                 var info: T?
                 if let data = response.data {
-                    print(String(data: data, encoding: String.Encoding.utf8))
-                    info = try? JSONDecoder().decode(T.self, from: data)
+                    info = String(data: data, encoding: String.Encoding.utf8) as? T
                 }
                 completionHandler(info)
             }
