@@ -50,6 +50,7 @@ class SignUpViewController: BaseViewController {
                                    }
 
                                    strongSelf.authService.currentUser = user
+                                   strongSelf.authService.createUserDocument()
                                    strongSelf.delegate?.signUpViewControllerDidSignUp(strongSelf)
         })
     }

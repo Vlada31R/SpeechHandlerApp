@@ -11,4 +11,10 @@ import Firebase
 class AuthService {
 
     var currentUser: User?
+    
+    func createUserDocument() {
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(currentUser?.uid ?? "").setData(["email" : currentUser?.email ?? ""])
+    }
 }
