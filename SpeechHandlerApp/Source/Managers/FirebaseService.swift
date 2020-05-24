@@ -27,6 +27,13 @@ class FirebaseService {
         return doc?.documentID
     }
     
+    func update(model: TrackModel) {
+        
+        guard let id = model.trackId else { return }
+
+        currentUserTracks?.document(id).setData(model.model())
+    }
+    
     func deleteTrack(id: String) {
         
         currentUserTracks?.document(id).delete()

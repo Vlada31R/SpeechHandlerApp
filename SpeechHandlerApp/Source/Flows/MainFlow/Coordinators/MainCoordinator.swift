@@ -88,4 +88,9 @@ extension MainCoordinator: SaveAudioViewControllerDelegate {
 // MARK: - ViewAudioViewControllerDelegate
 extension MainCoordinator: ViewAudioViewControllerDelegate {
     
+    func viewAudioViewController(_ viewController: ViewAudioViewController, didUpdate model: TrackModel) {
+        
+        audioListController?.trackModels.removeAll(where: { $0.trackId == model.trackId })
+        audioListController?.trackModels.append(model)
+    }
 }

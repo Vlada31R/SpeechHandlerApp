@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import JGProgressHUD
 
-protocol ViewAudioViewControllerDelegate: class {}
+protocol ViewAudioViewControllerDelegate: class {
+    
+    func viewAudioViewController(_ viewController: ViewAudioViewController, didUpdate model: TrackModel)
+}
 
 class ViewAudioViewController: BaseViewController {
     
@@ -30,6 +34,41 @@ class ViewAudioViewController: BaseViewController {
     }
     
     @IBAction func didTapTransformButton(_ sender: UIButton) {
+        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Transforming"
+        hud.show(in: self.view)
+        
+        let filePath = self.getDocumentsDirectory().appendingPathComponent(trackModel.containerFileName)
+
+        networkManager.postData(input: trackModel,
+                                 data: try! Data(contentsOf: filePath),
+                             fileName: trackModel.containerFileName) { response in
+
+                                    Timer.scheduledTimer(withTimeInterval: TimeInterval(response?.check_wait ?? 30),
+                                                         repeats: false) { timer in
+
+                                        let job = Job(id: response?.id ?? 0)
+
+                                        self.networkManager.getData(input: job) { response in
+
+                                            let text = ConvertedText(text: response ?? "")
+                                            self.trackModel.text = response
+
+                                            self.networkManager.getData(input: text) { response in
+
+                                                self.trackModel.text = response
+                                                self.trackModel.isTransformed = true
+                                                self.firebaseService.update(model: self.trackModel)
+                                                
+                                                hud.dismiss()
+                                                
+                                                self.setupInitialUI()
+                                                self.delegate?.viewAudioViewController(self, didUpdate: self.trackModel)
+                                            }
+                                        }
+                                    }
+        }
     }
 }
 
@@ -48,5 +87,11 @@ private extension ViewAudioViewController {
         
         areNotTransformedLabel.isHidden = trackModel.isTransformed
         transformButton.isHidden = trackModel.isTransformed
+    }
+    
+    func getDocumentsDirectory() -> URL {
+
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
