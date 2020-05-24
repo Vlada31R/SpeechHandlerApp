@@ -24,7 +24,7 @@ class AudioListViewController: BaseViewController {
     }
 
     @IBOutlet private weak var listTableView: UITableView!
-    @IBOutlet weak var emptyContentView: UIView!
+    @IBOutlet private weak var emptyContentView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

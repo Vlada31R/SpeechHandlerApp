@@ -15,12 +15,14 @@ struct TrackModel {
     
     let containerFileName: String
 
+    var isTransformed: Bool
     var text: String?
 
     func model() -> [String: Any] {
         return ["name" : name,
          "description" : description,
     "containerFileName": containerFileName,
+       "isTransformed" : isTransformed,
                 "text" : text]
     }
 }

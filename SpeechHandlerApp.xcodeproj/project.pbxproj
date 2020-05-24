@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		791AC97D247117F60031E48C /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC97C247117F60031E48C /* NetworkingConstants.swift */; };
 		791AC9802471292E0031E48C /* PostTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC97F2471292E0031E48C /* PostTrackResponse.swift */; };
 		791AC982247148820031E48C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC981247148820031E48C /* Error.swift */; };
+		79582219247A44F30083C07F /* ViewAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79582218247A44F30083C07F /* ViewAudioViewController.swift */; };
 		79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */; };
 		79B12E662467DD6700BA3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E652467DD6700BA3B7B /* Assets.xcassets */; };
 		79B12E692467DD6700BA3B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B12E672467DD6700BA3B7B /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		791AC97C247117F60031E48C /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
 		791AC97F2471292E0031E48C /* PostTrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTrackResponse.swift; sourceTree = "<group>"; };
 		791AC981247148820031E48C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		79582218247A44F30083C07F /* ViewAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAudioViewController.swift; sourceTree = "<group>"; };
 		79B12E592467DD6600BA3B7B /* SpeechHandlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechHandlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B12E5C2467DD6600BA3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B12E652467DD6700BA3B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 				791AC981247148820031E48C /* Error.swift */,
 			);
 			path = Decodable;
+			sourceTree = "<group>";
+		};
+		792D82142479A43100324749 /* ViewAudioViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79582218247A44F30083C07F /* ViewAudioViewController.swift */,
+			);
+			path = ViewAudioViewController;
 			sourceTree = "<group>";
 		};
 		79B12E502467DD6500BA3B7B = {
@@ -372,6 +382,7 @@
 				791934F1246973B700655FFC /* AudioListViewController */,
 				790DBBE6246A860E009481EB /* RecordingViewController */,
 				790DBBEC246AE00A009481EB /* SaveAudioViewController */,
+				792D82142479A43100324749 /* ViewAudioViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -614,6 +625,7 @@
 				790DBBE8246A8779009481EB /* RecordingViewController.swift in Sources */,
 				790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */,
 				79B12E5D2467DD6600BA3B7B /* AppDelegate.swift in Sources */,
+				79582219247A44F30083C07F /* ViewAudioViewController.swift in Sources */,
 				79B12E842467F38700BA3B7B /* ServicesAssembly.swift in Sources */,
 				790DBBEE246AE044009481EB /* SaveAudioViewController.swift in Sources */,
 				791934F3246973D700655FFC /* AudioListViewController.swift in Sources */,

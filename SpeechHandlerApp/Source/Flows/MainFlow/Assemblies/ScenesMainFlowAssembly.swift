@@ -15,6 +15,8 @@ protocol ScenesMainFlowAssemblyProtocol {
     func instantiateRecordingVC(delegate: RecordingViewControllerDelegate) -> RecordingViewController
     func instantiateSaveAudioVC(filePath: URL,
                                 delegate: SaveAudioViewControllerDelegate) -> SaveAudioViewController
+    func instantiateViewAudioVC(trackModel: TrackModel,
+                                delegate: ViewAudioViewControllerDelegate) -> ViewAudioViewController
 }
 
 class ScenesMainFlowAssembly {
@@ -28,7 +30,7 @@ class ScenesMainFlowAssembly {
 
 // MARK: - ScenesMainFlowAssemblyProtocol
 extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
-
+    
     func instantiateAudioListVC(delegate: AudioListViewControllerDelegate) -> AudioListViewController {
 
         let controller: AudioListViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
@@ -48,6 +50,17 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
 
         let controller: SaveAudioViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
         controller.filePath = filePath
+        controller.networkManager = servicesAssembly.networkManager
+        controller.firebaseService = servicesAssembly.firebaseService
+        controller.delegate = delegate
+        return controller
+    }
+    
+    func instantiateViewAudioVC(trackModel: TrackModel,
+                                  delegate: ViewAudioViewControllerDelegate) -> ViewAudioViewController {
+        
+        let controller: ViewAudioViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
+        controller.trackModel = trackModel
         controller.networkManager = servicesAssembly.networkManager
         controller.firebaseService = servicesAssembly.firebaseService
         controller.delegate = delegate

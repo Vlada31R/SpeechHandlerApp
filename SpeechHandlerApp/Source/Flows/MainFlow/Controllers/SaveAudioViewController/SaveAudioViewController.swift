@@ -42,8 +42,9 @@ class SaveAudioViewController: BaseViewController {
         }
 
         var trackModel = TrackModel(name: trackName,
-                                    description: descriptionTextField.text,
-                                    containerFileName: filePath.lastPathComponent)
+                             description: descriptionTextField.text,
+                       containerFileName: filePath.lastPathComponent,
+                           isTransformed: transformSwitch.isOn)
 
         guard transformSwitch.isOn
         else {
