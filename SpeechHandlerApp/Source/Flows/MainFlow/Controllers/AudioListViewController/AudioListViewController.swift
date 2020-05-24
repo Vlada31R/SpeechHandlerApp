@@ -16,7 +16,8 @@ protocol AudioListViewControllerDelegate: class {
 
 class AudioListViewController: BaseViewController {
 
-    weak var delegate: AudioListViewControllerDelegate?
+    var firebaseService: FirebaseService!
+    weak var delegate: AudioListViewControllerDelegate!
 
     var trackModels: [TrackModel] = [] {
         didSet {
@@ -34,6 +35,17 @@ class AudioListViewController: BaseViewController {
     }
 
     @IBAction func didTapDownloadButton(_ sender: UIButton) {
+        
+        firebaseService.downloadModels { models in
+            
+            guard !models.isEmpty
+            else {
+               self.showAlert(message: "Your tracks list is empty or something went wrong.")
+               return
+            }
+            
+            self.trackModels = models
+        }
     }
 
     @IBAction func didTapCreateNewButton(_ sender: UIButton) {

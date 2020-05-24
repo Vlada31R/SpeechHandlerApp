@@ -34,6 +34,7 @@ extension ScenesMainFlowAssembly: ScenesMainFlowAssemblyProtocol {
     func instantiateAudioListVC(delegate: AudioListViewControllerDelegate) -> AudioListViewController {
 
         let controller: AudioListViewController = UIStoryboard.mainFlowStoryboard.instantiateViewController()
+        controller.firebaseService = servicesAssembly.firebaseService
         controller.delegate = delegate
         return controller
     }

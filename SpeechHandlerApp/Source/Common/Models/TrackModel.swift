@@ -9,6 +9,8 @@
 import Alamofire
 
 struct TrackModel {
+    
+    var trackId: String?
 
     let name: String
     let description: String?

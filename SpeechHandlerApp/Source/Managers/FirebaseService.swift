@@ -25,4 +25,46 @@ class FirebaseService {
 
         currentUserTracks?.addDocument(data: model.model())
     }
+    
+    func downloadModels(completion: @escaping ([TrackModel])->()) {
+        
+        currentUserTracks?.getDocuments(completion: { (snapshot, error) in
+            
+            guard error == nil,
+                  let docSnapshot = snapshot
+            else {
+                completion([])
+                return
+            }
+            
+            var models: [TrackModel] = []
+            docSnapshot.documents.forEach { doc in
+                let model = self.decodeTrack(id: doc.documentID, from: doc.data())
+                
+                if let model = model {
+                    models.append(model)
+                }
+            }
+            completion(models)
+        })
+    }
+}
+
+private extension FirebaseService {
+    
+    func decodeTrack(id: String, from data: [String : Any]) -> TrackModel? {
+        
+        guard let name = data["name"] as? String,
+              let containerFileName = data["containerFileName"] as? String,
+              let isTransformed = data["isTransformed"] as? Bool
+        else { return nil }
+        
+        let model = TrackModel(trackId: id,
+                                  name: name,
+                           description: data["description"] as? String,
+                     containerFileName: containerFileName,
+                         isTransformed: isTransformed,
+                                  text: data["text"] as? String)
+        return model
+    }
 }
