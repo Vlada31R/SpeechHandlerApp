@@ -240,7 +240,6 @@
                         <constraints>
                             <constraint firstItem="Ixl-Uo-RiN" firstAttribute="centerY" secondItem="4GP-NU-A0t" secondAttribute="centerY" id="1Zm-Ga-f8I"/>
                             <constraint firstItem="puf-np-vsp" firstAttribute="width" secondItem="WrN-yN-uFS" secondAttribute="width" multiplier="0.88" id="BPk-HT-YRw"/>
-                            <constraint firstItem="4GP-NU-A0t" firstAttribute="leading" secondItem="Pc0-vg-zEs" secondAttribute="leading" constant="25" id="Fgz-xR-SRX"/>
                             <constraint firstItem="Pc0-vg-zEs" firstAttribute="trailing" secondItem="pi6-up-udG" secondAttribute="trailing" constant="25" id="Fnk-ZN-Mzt"/>
                             <constraint firstItem="Ixl-Uo-RiN" firstAttribute="leading" secondItem="4GP-NU-A0t" secondAttribute="trailing" constant="80" id="FxS-FX-ZiG"/>
                             <constraint firstItem="WrN-yN-uFS" firstAttribute="leading" secondItem="Pc0-vg-zEs" secondAttribute="leading" constant="25" id="Gcx-nO-Odb"/>

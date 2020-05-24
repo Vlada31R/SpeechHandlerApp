@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3387CDF4-C1B4-4E99-B871-8F1C969D0D93"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpeechHandlerApp/Source/Managers/Network/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "3387CDF4-C1B4-4E99-B871-8F1C969D0D93 - 76552387a9a738b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpeechHandlerApp.NetworkManagerImp.getData&lt;A where A: SpeechHandlerApp.RequestConfiguratable, A.Response: Swift.Decodable&gt;(input: A, completionHandler: (Swift.Optional&lt;A.Response&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SpeechHandlerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radchenko/Projects/SpeechHandlerApp/SpeechHandlerApp/Source/Managers/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "525">
-               </Location>
-               <Location
-                  uuid = "3387CDF4-C1B4-4E99-B871-8F1C969D0D93 - c552a3cfc3f4e70e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;A.Response&gt;) -&gt; () in SpeechHandlerApp.NetworkManagerImp.getData&lt;A where A: SpeechHandlerApp.RequestConfiguratable, A.Response: Swift.Decodable&gt;(input: A, completionHandler: (Swift.Optional&lt;A.Response&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SpeechHandlerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radchenko/Projects/SpeechHandlerApp/SpeechHandlerApp/Source/Managers/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "113">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1862EA66-0C0B-40C7-8E33-7B83C3B8CB7C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
