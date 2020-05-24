@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 protocol SaveAudioViewControllerDelegate: class {
 
@@ -55,6 +56,10 @@ class SaveAudioViewController: BaseViewController {
             
             return
         }
+        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Transforming"
+        hud.show(in: self.view)
 
         networkManager.postData(input: trackModel,
                                 data: try! Data(contentsOf: filePath),
@@ -75,6 +80,9 @@ class SaveAudioViewController: BaseViewController {
                                                 trackModel.text = response
                                                 let docId = self.firebaseService.save(model: trackModel)
                                                 trackModel.trackId = docId
+                                                
+                                                hud.dismiss()
+                                                
                                                 self.delegate?.saveAudioViewController(self, didSave: trackModel)
                                             }
                                         }

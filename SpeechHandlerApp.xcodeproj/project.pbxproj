@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B1ED3D08EEC3625BE70A6A5 /* libPods-SpeechHandlerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */; };
 		790DBBE5246A7DC9009481EB /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE4246A7DC9009481EB /* TrackModel.swift */; };
 		790DBBE8246A8779009481EB /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE7246A8779009481EB /* RecordingViewController.swift */; };
 		790DBBEA246A92B6009481EB /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DBBE9246A92B6009481EB /* ShadowButton.swift */; };
@@ -50,11 +49,11 @@
 		79B12EA924682FEF00BA3B7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EA824682FEF00BA3B7B /* BaseViewController.swift */; };
 		79B12EAB24683D4C00BA3B7B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12EAA24683D4C00BA3B7B /* String.swift */; };
 		79CD1DF72474824700883838 /* ConvertedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CD1DF62474824700883838 /* ConvertedText.swift */; };
+		BA66304AC6975FE819186DDD /* Pods_SpeechHandlerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D59B2A35FFE6D47C9FFB42 /* Pods_SpeechHandlerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		150D680BEF98CB57CB4662E5 /* Pods-SpeechHandlerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.debug.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.debug.xcconfig"; sourceTree = "<group>"; };
-		66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeechHandlerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790DBBE4246A7DC9009481EB /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		790DBBE7246A8779009481EB /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		790DBBE9246A92B6009481EB /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		79B12EAA24683D4C00BA3B7B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		79CD1DF62474824700883838 /* ConvertedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedText.swift; sourceTree = "<group>"; };
 		7B2D7AD6251AAF796CBB2A53 /* Pods-SpeechHandlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechHandlerApp.release.xcconfig"; path = "Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp.release.xcconfig"; sourceTree = "<group>"; };
+		B6D59B2A35FFE6D47C9FFB42 /* Pods_SpeechHandlerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeechHandlerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B1ED3D08EEC3625BE70A6A5 /* libPods-SpeechHandlerApp.a in Frameworks */,
+				BA66304AC6975FE819186DDD /* Pods_SpeechHandlerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +498,7 @@
 		E6EBB1A733755D0911580319 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66ACDB8002B91D36EF167643 /* libPods-SpeechHandlerApp.a */,
+				B6D59B2A35FFE6D47C9FFB42 /* Pods_SpeechHandlerApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 				79B12E552467DD6500BA3B7B /* Sources */,
 				79B12E562467DD6500BA3B7B /* Frameworks */,
 				79B12E572467DD6500BA3B7B /* Resources */,
-				D73B065B20B2619FE324C081 /* [CP] Copy Pods Resources */,
+				3AF4A457BBE6525E0F98BE73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -575,6 +575,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3AF4A457BBE6525E0F98BE73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3CA46F259B14AA65CAF27379 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,23 +612,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D73B065B20B2619FE324C081 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpeechHandlerApp/Pods-SpeechHandlerApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
