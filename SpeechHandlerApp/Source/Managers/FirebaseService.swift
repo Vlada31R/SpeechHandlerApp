@@ -8,11 +8,13 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class FirebaseService {
     
     fileprivate var authService: AuthService
     fileprivate let db = Firestore.firestore()
+    fileprivate let storage = Storage.storage()
     fileprivate var currentUserTracks: CollectionReference?
 
     init(authService: AuthService) {
@@ -37,6 +39,14 @@ class FirebaseService {
     func deleteTrack(id: String) {
         
         currentUserTracks?.document(id).delete()
+    }
+    
+    func upload(filePath: URL) {
+        
+        let refPath = (authService.currentUser?.uid ?? "") + "/" + filePath.lastPathComponent
+        let fileRef = storage.reference().child(refPath)
+
+        _ = fileRef.putFile(from: filePath)
     }
     
     func downloadModels(completion: @escaping ([TrackModel])->()) {

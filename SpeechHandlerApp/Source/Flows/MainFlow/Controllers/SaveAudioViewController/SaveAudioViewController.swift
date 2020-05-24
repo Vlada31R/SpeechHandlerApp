@@ -50,6 +50,7 @@ class SaveAudioViewController: BaseViewController {
         guard transformSwitch.isOn
         else {
             let docId = self.firebaseService.save(model: trackModel)
+            self.firebaseService.upload(filePath: filePath)
             trackModel.trackId = docId
             
             self.delegate?.saveAudioViewController(self, didSave: trackModel)
@@ -79,6 +80,7 @@ class SaveAudioViewController: BaseViewController {
 
                                                 trackModel.text = response
                                                 let docId = self.firebaseService.save(model: trackModel)
+                                                self.firebaseService.upload(filePath: self.filePath)
                                                 trackModel.trackId = docId
                                                 
                                                 hud.dismiss()

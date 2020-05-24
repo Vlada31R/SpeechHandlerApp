@@ -11,6 +11,7 @@ target 'SpeechHandlerApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   
   pod 'JGProgressHUD'
 
