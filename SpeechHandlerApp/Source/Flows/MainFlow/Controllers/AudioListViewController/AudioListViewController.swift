@@ -11,6 +11,7 @@ import UIKit
 protocol AudioListViewControllerDelegate: class {
 
     func audioListViewControllerDidCreateNewTrack(_ viewController: AudioListViewController)
+    func audioListViewController(_ viewController: AudioListViewController, didSelectAudio audio: TrackModel)
 }
 
 class AudioListViewController: BaseViewController {
@@ -46,7 +47,14 @@ class AudioListViewController: BaseViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension AudioListViewController: UITableViewDelegate {}
+extension AudioListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let model = trackModels[indexPath.row]
+        delegate?.audioListViewController(self, didSelectAudio: model)
+    }
+}
 
 // MARK: - UITableViewDataSource
 extension AudioListViewController: UITableViewDataSource {

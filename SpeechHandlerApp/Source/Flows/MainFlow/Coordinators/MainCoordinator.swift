@@ -39,11 +39,18 @@ extension MainCoordinator: Coordinator {
 
 // MARK: - AudioListViewControllerDelegate
 extension MainCoordinator: AudioListViewControllerDelegate {
-
+    
     func audioListViewControllerDidCreateNewTrack(_ viewController: AudioListViewController) {
 
         let recordingVC = scenesAssembly.scenesMainFlowAssembly.instantiateRecordingVC(delegate: self)
         viewController.navigationController?.pushViewController(recordingVC, animated: true)
+    }
+    
+    func audioListViewController(_ viewController: AudioListViewController,
+                             didSelectAudio audio: TrackModel) {
+        
+        let viewAudioVC = scenesAssembly.scenesMainFlowAssembly.instantiateViewAudioVC(trackModel: audio, delegate: self)
+        viewController.navigationController?.pushViewController(viewAudioVC, animated: true)
     }
 }
 
@@ -76,4 +83,9 @@ extension MainCoordinator: SaveAudioViewControllerDelegate {
 
         listVC.trackModels.append(model)
     }
+}
+
+// MARK: - ViewAudioViewControllerDelegate
+extension MainCoordinator: ViewAudioViewControllerDelegate {
+    
 }
