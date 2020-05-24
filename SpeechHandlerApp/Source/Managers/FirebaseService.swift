@@ -21,9 +21,15 @@ class FirebaseService {
         currentUserTracks = db.collection("users").document(authService.currentUser?.uid ?? "").collection("tracks")
     }
 
-    func save(model: TrackModel) {
+    func save(model: TrackModel) -> String? {
 
-        currentUserTracks?.addDocument(data: model.model())
+        let doc = currentUserTracks?.addDocument(data: model.model())
+        return doc?.documentID
+    }
+    
+    func deleteTrack(id: String) {
+        
+        currentUserTracks?.document(id).delete()
     }
     
     func downloadModels(completion: @escaping ([TrackModel])->()) {

@@ -48,7 +48,11 @@ class SaveAudioViewController: BaseViewController {
 
         guard transformSwitch.isOn
         else {
-            delegate?.saveAudioViewController(self, didSave: trackModel)
+            let docId = self.firebaseService.save(model: trackModel)
+            trackModel.trackId = docId
+            
+            self.delegate?.saveAudioViewController(self, didSave: trackModel)
+            
             return
         }
 
@@ -69,7 +73,8 @@ class SaveAudioViewController: BaseViewController {
                                             self.networkManager.getData(input: text) { response in
 
                                                 trackModel.text = response
-                                                self.firebaseService.save(model: trackModel)
+                                                let docId = self.firebaseService.save(model: trackModel)
+                                                trackModel.trackId = docId
                                                 self.delegate?.saveAudioViewController(self, didSave: trackModel)
                                             }
                                         }

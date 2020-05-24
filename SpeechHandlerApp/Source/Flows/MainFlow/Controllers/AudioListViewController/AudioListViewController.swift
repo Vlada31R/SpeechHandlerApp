@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Async
 
 protocol AudioListViewControllerDelegate: class {
 
@@ -66,6 +67,20 @@ extension AudioListViewController: UITableViewDelegate {
         let model = trackModels[indexPath.row]
         delegate?.audioListViewController(self, didSelectAudio: model)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete
+        else {
+            return
+        }
+        
+        self.deleteTrack(at: indexPath.row)
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -111,5 +126,33 @@ private extension AudioListViewController {
         emptyContentView.isHidden = !trackModels.isEmpty
         listTableView.isHidden = trackModels.isEmpty
         listTableView.reloadData()
+    }
+    
+    func deleteTrack(at index: Int) {
+        
+        let delete: (UIAlertAction) -> () = { action in
+            
+            self.firebaseService.deleteTrack(id: self.trackModels[index].trackId ?? "")
+            self.trackModels.remove(at: index)
+        }
+        
+        let alert = UIAlertController(title: "Are you sure that you want to delete \(trackModels[index].name) track?",
+                                    message: "",
+                             preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Close",
+                                         style: .default,
+                                       handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "Delete",
+                                         style: .destructive,
+                                       handler: delete)
+
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+
+        Async.main {
+            self.present(alert, animated: true)
+        }
     }
 }
