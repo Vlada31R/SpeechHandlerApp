@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import AVFoundation
 
 protocol ViewAudioViewControllerDelegate: class {
     
@@ -22,6 +23,8 @@ class ViewAudioViewController: BaseViewController {
 
     weak var delegate: ViewAudioViewControllerDelegate?
     
+    fileprivate var player: AVAudioPlayer?
+    
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var transformedTextLabel: UILabel!
     @IBOutlet private weak var areNotTransformedLabel: UILabel!
@@ -31,6 +34,34 @@ class ViewAudioViewController: BaseViewController {
         super.viewDidLoad()
         
         self.setupInitialUI()
+    }
+    
+    @IBAction func didTapPlayButton(_ sender: UIButton) {
+        
+        let filePath = self.getDocumentsDirectory().appendingPathComponent(trackModel.containerFileName)
+        
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: filePath)
+                player?.play()
+            } catch {
+                self.showAlert(message: "Something went wrong.")
+            }
+        } else {
+            firebaseService.download(fileName: trackModel.containerFileName) { url in
+                if let fileUrl = url {
+                    do {
+                        self.player = try AVAudioPlayer(contentsOf: fileUrl)
+                        self.player?.play()
+                    } catch {
+                        self.showAlert(message: "Something went wrong.")
+                    }
+                } else {
+                    self.showAlert(message: "Couldn't get audiofile.")
+                }
+            }
+        }
     }
     
     @IBAction func didTapTransformButton(_ sender: UIButton) {

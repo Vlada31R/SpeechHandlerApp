@@ -23,16 +23,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A61602D4-57F2-43FE-8A3A-AB129567D231"
+            uuid = "DAF1BDB1-6194-4C6B-81E5-8B961277D73A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechHandlerApp/Source/Managers/FirebaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "upload(filePath:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "download(fileName:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E65316A5-B328-42FD-8F39-AB8FF1CCE377"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpeechHandlerApp/Source/Managers/FirebaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "download(fileName:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E65316A5-B328-42FD-8F39-AB8FF1CCE377 - a1a3655c0a24a167"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpeechHandlerApp.FirebaseService.download(fileName: Swift.String, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SpeechHandlerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radchenko/Projects/SpeechHandlerApp/SpeechHandlerApp/Source/Managers/FirebaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1129">
+               </Location>
+               <Location
+                  uuid = "E65316A5-B328-42FD-8F39-AB8FF1CCE377 - da9a6247ee36f860"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SpeechHandlerApp.FirebaseService.download(fileName: Swift.String, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SpeechHandlerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radchenko/Projects/SpeechHandlerApp/SpeechHandlerApp/Source/Managers/FirebaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "214">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "736E1E98-382F-4189-A9D0-9CE2BEB8CF7D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpeechHandlerApp/Source/Managers/FirebaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "download(fileName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

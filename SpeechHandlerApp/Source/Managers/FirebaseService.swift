@@ -41,14 +41,6 @@ class FirebaseService {
         currentUserTracks?.document(id).delete()
     }
     
-    func upload(filePath: URL) {
-        
-        let refPath = (authService.currentUser?.uid ?? "") + "/" + filePath.lastPathComponent
-        let fileRef = storage.reference().child(refPath)
-
-        _ = fileRef.putFile(from: filePath)
-    }
-    
     func downloadModels(completion: @escaping ([TrackModel])->()) {
         
         currentUserTracks?.getDocuments(completion: { (snapshot, error) in
@@ -71,6 +63,30 @@ class FirebaseService {
             completion(models)
         })
     }
+    
+    func upload(filePath: URL) {
+        
+        let refPath = (authService.currentUser?.uid ?? "") + "/" + filePath.lastPathComponent
+        let fileRef = storage.reference().child(refPath)
+
+        _ = fileRef.putFile(from: filePath)
+    }
+    
+    func download(fileName: String, completion: @escaping (URL?)-> ()) {
+        
+        let refPath = (authService.currentUser?.uid ?? "") + "/" + fileName
+        let pathReference = storage.reference(withPath: refPath)
+        
+        let filePath = self.getDocumentsDirectory().appendingPathComponent(fileName)
+        
+        let downloadTask = pathReference.write(toFile: filePath) { url, error in
+          if let url = url {
+            completion(url)
+          } else {
+            completion(nil)
+          }
+        }
+    }
 }
 
 private extension FirebaseService {
@@ -89,5 +105,11 @@ private extension FirebaseService {
                          isTransformed: isTransformed,
                                   text: data["text"] as? String)
         return model
+    }
+    
+    func getDocumentsDirectory() -> URL {
+
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
